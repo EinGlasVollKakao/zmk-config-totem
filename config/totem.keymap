@@ -21,6 +21,7 @@
 #define ADJ  3
 #define TVP1 4
 #define TVP2 5
+#define GAME 6
 
 &mt {
     quick-tap-ms = <150>;
@@ -203,6 +204,17 @@
             >;
         };
 
+        game_layer {
+            label = "GAME";
+
+            bindings = <
+            &trans  &trans  &kp W   &kp E   &trans    &trans  &trans  &trans  &trans  &trans
+            &trans  &kp A   &kp S   &kp D   &trans    &trans  &trans  &trans  &trans  &trans
+&kp LCTRL   &trans  &trans  &trans  &kp C   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                     &kp LSHIFT &kp SPACE   &trans    &trans  &trans  &tog GAME     
+            >;
+        };
+
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         nav_layer {
@@ -275,7 +287,7 @@
 
             bindings = <
         &sys_reset   &bt BT_CLR  &out OUT_TOG  &studio_unlock  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
-        &bootloader  &bt BT_NXT  &trans        &trans          &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
+        &bootloader  &bt BT_NXT  &trans        &tog GAME       &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &trans  &trans       &bt BT_PRV  &trans        &trans          &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                  &trans        &trans          &trans    &trans  &trans  &trans
             >;
