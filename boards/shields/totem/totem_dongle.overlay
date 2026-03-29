@@ -1,6 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#import "totem-layouts.dtsi"
+#include "totem-layouts.dtsi"
+
 &totem_layout {
 	transform = <&default_transform>;
 };
