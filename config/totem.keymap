@@ -24,7 +24,8 @@
 
 &mt {
     quick-tap-ms = <150>;
-    global-quick-tap;
+    // prevent triggering hold behavior if it hasn't been a certail duration since last key press - usefull when quick typing 
+    require-prior-idle-ms = <150>;
     flavor = "tap-preferred";
     tapping-term-ms = <170>;
 };
